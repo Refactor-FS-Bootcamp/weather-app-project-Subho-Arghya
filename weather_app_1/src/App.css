@@ -1,0 +1,43 @@
+.header-wrapper {
+  display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 15px 20px;
+    margin-left: 150px;
+}
+
+.header-wrapper .button {
+  padding: 6px 12px;
+    font-size: 1.1rem;
+    background-color: #853985;
+    color: #ddd;
+}
+
+.sidebar-container {
+  width: 150px;
+  height: 100vh;
+  background-color: #853985;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  
+}
+
+.sidebar-container .inactive-button {
+  height: 75px;
+  color: #c5b6c5;
+  background-color: rgb(168, 42, 151);
+  border: 0
+}
+  
+
+
+.sidebar-container .active-button {
+  height: 75px;
+  color: #853985;
+  background-color: palegoldenrod;
+  border: 0
+}
+  
