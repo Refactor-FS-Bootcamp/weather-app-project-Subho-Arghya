@@ -1,5 +1,6 @@
 import { useState } from 'react'
 //import SideButton from './SideButton'
+import { Link } from 'react-router-dom'
 
 const Sidebar = () => {
 
@@ -8,11 +9,13 @@ const Sidebar = () => {
     const tabsList = [
         {
             id: 1,
-            name: "Home"
+            name: "Home",
+            uri: "/"
         },
         {
             id: 2,
-            name: "Cities"
+            name: "Cities",
+            uri: "/city"
         }
     ]
 
@@ -25,9 +28,11 @@ const Sidebar = () => {
         <div className="sidebar-container">
             {tabsList.map((tab) => {
                 return (
-                    <button key={tab.id} 
+                    <Link to={tab.uri} key={tab.id}>
+                    <button  
                 className={active === tab.name ? 'active-button' : 'inactive-button'} 
                 onClick={() => handleClick(tab.name)}>{tab.name}</button>
+                </Link>
                 )
                 
             })}

@@ -29,7 +29,8 @@
   height: 75px;
   color: #c5b6c5;
   background-color: rgb(168, 42, 151);
-  border: 0
+  border: 0;
+  width: 100%;
 }
   
 
@@ -38,6 +39,7 @@
   height: 75px;
   color: #853985;
   background-color: palegoldenrod;
-  border: 0
+  border: 0;
+  width: 100%;
 }
   
