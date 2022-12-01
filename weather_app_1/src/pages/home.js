@@ -1,8 +1,8 @@
 
 const Home = () => {
     return (
-        <div>
-            <h3 style={{ marginLeft : "200px" }}>I am in home</h3>
+        <div  style={{ marginLeft : "200px" }}>
+            <p>There are no cities selected as favorite yet</p>
         </div>
     )
 }
