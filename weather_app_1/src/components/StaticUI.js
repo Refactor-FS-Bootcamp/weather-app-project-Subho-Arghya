@@ -4,7 +4,7 @@ import Sidebar from "./Sidebar";
 const StaticUI = (props) => {
     return (
         <>
-        <Header />
+        <Header headerMessage={props.headerMessage}/>
         <Sidebar />
         {props.children}
         </>

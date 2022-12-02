@@ -1,9 +1,14 @@
+/**
+Header Styles
+*/
+
 .header-wrapper {
   display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 5px 15px 20px;
+    padding: 5px 15px 10px;
     margin-left: 150px;
+    min-height: 65px;
 }
 
 .header-wrapper .button {
@@ -12,6 +17,10 @@
     background-color: #853985;
     color: #ddd;
 }
+
+/**
+Sidebar Styles
+*/
 
 .sidebar-container {
   width: 150px;
@@ -42,6 +51,10 @@
   border: 0;
   width: 100%;
 }
+
+/**
+City Page Styles
+*/
 
 .city-container {
   width: calc(100vw - 250px);
@@ -74,4 +87,92 @@
   flex-direction: column;
   padding: 10px;
   gap: 10px;
+}
+
+/**
+Modal Styles
+*/
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #0009;
+  height: 100%;
+  width: 100%;
+  z-index: 10;  
+}
+
+.modal-display {
+  display: flex;
+  flex-direction: column;
+  height: 60vh;
+  width: 40%;
+  min-width: 300px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  
+}
+
+.modal-display .modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 15px;
+  background-color: rgb(201, 201, 56);
+  height: 15%;
+  border-radius: 12px 12px 0px 0px;
+}
+
+.modal-display .modal-header .close-button {
+  font-size: 1.5em;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.modal-display .modal-input {
+  background-color: #ddd;   
+  text-align: center;
+  padding: 15px;
+
+}
+
+.modal-display .modal-input input {
+  width: 75%;
+  padding: 10px;
+}
+
+.modal-display .modal-cities-section {
+  height: 75%;
+    background-color: blanchedalmond;
+    border-radius: 0 0 12px 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    overflow-y: scroll;
+    scrollbar-width: none;
+    padding: 10px 40px;
+    text-align: center;    
+}
+
+.modal-display .modal-cities-section::-webkit-scrollbar {
+  display: none;
+}
+
+.modal-display .modal-cities-section .single-city {
+  padding: 5px;
+  border: 1px solid grey;
+  background-color: #b1c192;
+  cursor: pointer;
+}
+
+.modal-overlay .bg-clicker {
+  z-index: 999;
+  height: 100%;
+  width:100%;
+  top: 0;
+  left: 0;
+  background-color: #0009;
 }

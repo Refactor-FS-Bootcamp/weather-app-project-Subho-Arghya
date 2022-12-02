@@ -7,12 +7,14 @@ import City from "../pages/city"
 
 const AppRoute = () => {
 
+    const headerMessage = "My Favorite cities";
+
     return (
         <>
             <Routes>
                 <Route path="/" element={
-                    <StaticUI>
-                        <Home />
+                    <StaticUI headerMessage={headerMessage}>
+                        <Home/>
                     </StaticUI>
                 }/>
                 <Route path="/cities" element={
