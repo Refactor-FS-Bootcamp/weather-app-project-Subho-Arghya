@@ -142,7 +142,14 @@ Modal Styles
 .modal-display .modal-input input {
   width: 75%;
   padding: 10px;
+  border: 1px solid lightblue;
 }
+
+.modal-display .modal-input input:hover {
+  border: 1px solid rgb(76, 118, 197);
+  outline: none;
+}
+
 
 .modal-display .modal-cities-section {
   height: 75%;
@@ -162,10 +169,12 @@ Modal Styles
 }
 
 .modal-display .modal-cities-section .single-city {
-  padding: 5px;
+  padding: 5px 20px;
   border: 1px solid grey;
   background-color: #b1c192;
   cursor: pointer;
+  display: flex;
+  justify-content: space-between;
 }
 
 .modal-overlay .bg-clicker {

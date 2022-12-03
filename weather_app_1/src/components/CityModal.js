@@ -40,6 +40,9 @@ const CityModal = (props) => {
 
     const notifyCityAdd = () => toast.success('City Added.');
 
+        
+    
+
     return (
         <>
             <div className="modal-overlay">
@@ -59,7 +62,8 @@ const CityModal = (props) => {
                                 <div className="single-city" 
                                 onClick={() => handleAddCity(city)}
                                 key={city.id}>
-                                {city.name}
+                                    <div>{city.name}</div>
+                                    <div><button>&#43;</button></div>
                                 </div>
                             )
                         })}
