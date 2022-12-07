@@ -1,13 +1,18 @@
-import { useState } from "react"
+import { useState , useContext} from "react"
 import { CitiesList } from "../helper/constant"
+import { MyContext } from "../context/app-context";
 import toast, { Toaster, ToastBar } from 'react-hot-toast';
 
 
 const CityModal = (props) => {
-    const [allCities, setAllCities] = useState(CitiesList)
+    //const [allCities, setAllCities] = useState(CitiesList)
     const [textInput,setTextInput] = useState("")
-    const [selectedCities, setSelectedCities] = useState([])
-    
+    //const [selectedCities, setSelectedCities] = useState([])
+
+    const cityContext = useContext(MyContext)
+    const { selectedCities , setSelectedCities , allCities, setAllCities } = cityContext
+
+        
 
     const handleInput = (e) => {
         setTextInput(e.target.value)
@@ -16,15 +21,15 @@ const CityModal = (props) => {
                 city.name.toLowerCase().includes(e.target.value.toLowerCase()) && !selectedCities.includes(city)
             )            
         })
-        console.log(filteredCities)
+        //console.log(filteredCities)
         setAllCities(filteredCities)
     }
 
     const handleAddCity = (city) => {
         let allSelected = [...selectedCities, city]
-        console.log(allSelected)
+        //console.log(allSelected)
         setSelectedCities(allSelected)
-        notifyCityAdd()
+        notifyCityAdd(city.name)
         let unselected = allCities.filter((c) => {
             return (
                 c !== city
@@ -38,8 +43,11 @@ const CityModal = (props) => {
         props.handleModalClose()
     } 
 
-    const notifyCityAdd = () => toast.success('City Added.');
+    const notifyCityAdd = (name) => 
+    {
 
+        toast.success(`City: ${name} Added.`);
+    }
         
     
 
@@ -63,7 +71,9 @@ const CityModal = (props) => {
                                 onClick={() => handleAddCity(city)}
                                 key={city.id}>
                                     <div>{city.name}</div>
-                                    <div><button>&#43;</button></div>
+                                    <div><button style={{cursor: "pointer"}}>
+                                    &#43;
+                                    </button></div>
                                 </div>
                             )
                         })}

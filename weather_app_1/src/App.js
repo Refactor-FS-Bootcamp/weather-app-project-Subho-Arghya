@@ -3,14 +3,17 @@ import AppRoute from "./Routes/AppRoute"
 
 
 import "./App.css";
+import { ApplicationContextProvider } from "./context/app-context";
 
 function App() {
   return (
-    
+
     <div className="App">
-      <AppRoute />      
+      <ApplicationContextProvider>
+        <AppRoute />
+      </ApplicationContextProvider>
     </div>
-    
+
   );
 }
 

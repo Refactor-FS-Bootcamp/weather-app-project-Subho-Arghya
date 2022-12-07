@@ -76,7 +76,7 @@ City Page Styles
   display: flex;
   justify-content: space-between;
   height: 10%;
-  background-color: bisque;
+  background-color: #f9ecdf;
   border-bottom: 1px solid grey;
   align-items: center;
   padding: 0 10px;
@@ -87,6 +87,50 @@ City Page Styles
   flex-direction: column;
   padding: 10px;
   gap: 10px;
+  overflow-y: scroll;
+  scrollbar-width: none;  
+}
+.city-container .city-selection .city-selection-body::-webkit-scrollbar {
+  display: none;
+}
+
+.city-container .city-selection .city-selection-body .selected-city {
+  padding: 4px;
+  border: 1px solid #444;
+}
+
+.city-container .city-description {
+  width: 65%;
+  display: flex;
+  flex-direction: column;
+  background-color: #f9ecdf;
+  border: 1px solid #666;
+}
+
+.city-container .city-description .city-description-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 10px;
+  height: 10%;
+  border-bottom: 2px solid #111;
+}
+
+.city-container .city-description .city-description-body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 85%;
+}
+
+.city-container .city-description .city-description-body .city-desc-content-inner #description {
+  color: green;
+  font-style: italic;
+}
+
+.city-container .city-description .city-description-body .city-desc-content-inner .inner-det span {
+  font-weight: bold;
 }
 
 /**
@@ -184,4 +228,43 @@ Modal Styles
   top: 0;
   left: 0;
   background-color: #0009;
+}
+
+/**
+Home Page Styles
+*/
+
+.home-container {
+  width: calc(100vw - 250px);
+  display: flex;
+  gap: 30px;
+  padding: 20px 20px;
+  flex-wrap: wrap
+}
+
+.home-container .single-fav-city {
+  width: 30%;
+  min-width: 200px;  
+  border: 1px solid grey;
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  
+}
+
+.home-container .single-fav-city .single-fav-city-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.home-container .single-fav-city .single-fav-city-desc {
+  color: green;
+  font-style: italic;
+}
+
+.home-container .single-fav-city .single-fav-city-details span {
+  font-weight: bold;
+
 }
